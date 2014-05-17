@@ -152,11 +152,11 @@ public class SynchronizedQueue {
      * This runnable loops for mMaxIterations and calls take() on mQueue to remove the iteration from the queue.
      */
     static Runnable consumerRunnable = new Runnable() {
-        public void run() {
-            for (int i = 0; i < mMaxIterations; i++)
-                try {
-                    if (Thread.interrupted()) {
-                        throw new InterruptedException();
+            public void run() {
+                for (int i = 0; i < mMaxIterations; i++)
+                    try {
+                        if (Thread.interrupted()) {
+                            throw new InterruptedException();
                     }
                     Integer result = (Integer) mQueue.take();
 
@@ -192,6 +192,10 @@ public class SynchronizedQueue {
     public static SynchronizedQueueResult testQueue(QueueAdapter<Integer> queue) {
         try {
             mQueue = queue;
+
+            // Please make sure to keep all the "TODO" comments in the
+            // code below to make it easy for peer reviewers to find
+            // them.
 
             // TODO - you fill in here to replace the null
             // initialization below to create two Java Threads, one

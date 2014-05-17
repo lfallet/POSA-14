@@ -1,4 +1,4 @@
-// Import the necessary Java synchronization and scheduling classes.
+package edu.vuum.mocca;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.concurrent.locks.Lock;
@@ -18,7 +18,8 @@ class SimpleAtomicLong {
     /**
      * The ReentrantReadWriteLock used to serialize access to mValue.
      */
-    // TODO - replace the null with the appropriate initialization:
+    // TODO -- you fill in here by replacing the null with an
+    // initialization of ReentrantReadWriteLock.
     // LFA: fair is waayyy much longer than unfair!
     private ReentrantReadWriteLock mRWLock = new ReentrantReadWriteLock(false);
 
