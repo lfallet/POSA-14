@@ -1,3 +1,5 @@
+// Import the necessary Java synchronization and scheduling classes.
+
 package edu.vuum.mocca;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -34,7 +36,7 @@ class SimpleAtomicLong {
     }
 
     /**
-     * @brief Gets the current value.
+     * @brief Gets the current value
      * 
      * @returns The current value
      */
